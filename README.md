@@ -12,7 +12,7 @@ presentViewController(alert.viewController, animated: true, completion: nil)
 ![confirmation](./images/confirmation.png)
 
 ```swift
-let recovery = Recovery(name: "Recover", style: .Nondestructive) { action in
+let recovery = Recovery(name: "Recover", style: .Destructive) { action in
     print("Recover!!")
 }
 let alert = Alert.Suggestion(error, recovery)
@@ -22,7 +22,7 @@ presentViewController(alert.viewController, animated: true, completion: nil)
 ![desructive_suggestion](./images/destructive_suggestion.png)
 
 ```swift
-let recovery = Recovery(name: "Recover", style: .Destructive) { action in
+let recovery = Recovery(name: "Recover", style: .Nondestructive) { action in
     print("Recover!!")
 }
 let alert = Alert.Suggestion(error, recovery)
