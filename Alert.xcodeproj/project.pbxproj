@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3D1BC7E11C7301B80042A519 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1BC7E01C7301B80042A519 /* Alert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D1BC7E91C73028C0042A519 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BC7E81C73028C0042A519 /* Alert.swift */; };
+		3D1BC7EB1C7304EE0042A519 /* AlertMessageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BC7EA1C7304EE0042A519 /* AlertMessageConvertible.swift */; };
+		3D1BC7ED1C7305A70042A519 /* NSError+AlertMessageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BC7EC1C7305A70042A519 /* NSError+AlertMessageConvertible.swift */; };
+		3D1BC7EF1C7316590042A519 /* Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BC7EE1C7316590042A519 /* Recovery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D1BC7DD1C7301B80042A519 /* Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1BC7E01C7301B80042A519 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		3D1BC7E21C7301B80042A519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1BC7E81C73028C0042A519 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3D1BC7EA1C7304EE0042A519 /* AlertMessageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessageConvertible.swift; sourceTree = "<group>"; };
+		3D1BC7EC1C7305A70042A519 /* NSError+AlertMessageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+AlertMessageConvertible.swift"; sourceTree = "<group>"; };
+		3D1BC7EE1C7316590042A519 /* Recovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recovery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,10 @@
 			children = (
 				3D1BC7E01C7301B80042A519 /* Alert.h */,
 				3D1BC7E21C7301B80042A519 /* Info.plist */,
+				3D1BC7E81C73028C0042A519 /* Alert.swift */,
+				3D1BC7EA1C7304EE0042A519 /* AlertMessageConvertible.swift */,
+				3D1BC7EC1C7305A70042A519 /* NSError+AlertMessageConvertible.swift */,
+				3D1BC7EE1C7316590042A519 /* Recovery.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -130,6 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1BC7EF1C7316590042A519 /* Recovery.swift in Sources */,
+				3D1BC7E91C73028C0042A519 /* Alert.swift in Sources */,
+				3D1BC7EB1C7304EE0042A519 /* AlertMessageConvertible.swift in Sources */,
+				3D1BC7ED1C7305A70042A519 /* NSError+AlertMessageConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +244,7 @@
 		3D1BC7E61C7301B80042A519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -238,12 +255,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.naoty.Alert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3D1BC7E71C7301B80042A519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
